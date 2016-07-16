@@ -1,0 +1,16 @@
+---
+AllCops:
+  Exclude:
+    - 'Gemfile'
+Documentation:
+  Enabled: false
+AbcSize:
+  Enabled: false
+ClassLength:
+  Max: 150
+LineLength:
+  Enabled: false
+MethodLength:
+  Enabled: false
+NumericLiteralPrefix:
+  Enabled: false
