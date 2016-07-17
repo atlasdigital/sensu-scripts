@@ -3,7 +3,7 @@
 # Sends the output of metrics to InfluxDB.
 # Uses a trivial cache to reduce http requests to InfluxDB. By default, it
 # flushes the cache every 6 seconds or 500 items, whichever it happens first.
-#
+
 require 'rubygems' if RUBY_VERSION < '1.9.0'
 require 'em-http-request'
 require 'eventmachine'
@@ -46,7 +46,6 @@ module Sensu
         output = ''
 
         # init event and check data
-        # body = []
         client = event[:client][:name]
         event[:check][:influxdb][:database] ||= @influx_conf['database']
         event[:check][:time_precision] ||= @influx_conf['time_precision']
