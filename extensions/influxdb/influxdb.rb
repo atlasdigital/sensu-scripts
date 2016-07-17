@@ -50,7 +50,7 @@ module Sensu
         event[:check][:influxdb][:database] ||= @influx_conf['database']
         event[:check][:time_precision] ||= @influx_conf['time_precision']
 
-        event[:check][:output].split(/\r\n/).each do |line|
+        event[:check][:output].split(/\r?\n/).each do |line|
           key, value, time = line.split(/\s+/)
           values = "value=#{value.to_f}"
           if event[:check][:duration]
